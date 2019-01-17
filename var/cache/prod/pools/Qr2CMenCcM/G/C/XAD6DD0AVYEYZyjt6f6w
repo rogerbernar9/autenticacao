@@ -1,0 +1,78 @@
+<?php return array(PHP_INT_MAX, static function () {
+
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+            clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+            clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+        ],
+        null,
+        [
+            'Doctrine\\ORM\\Query\\ParserResult' => [
+                '_sqlExecutor' => [
+                    $o[1],
+                ],
+                '_resultSetMapping' => [
+                    $o[2],
+                ],
+                '_parameterMappings' => [
+                    [
+                        'username' => [
+                            0,
+                        ],
+                        'email' => [
+                            1,
+                        ],
+                    ],
+                ],
+            ],
+            'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+                '_sqlStatements' => [
+                    1 => 'SELECT u0_.id AS id_0, u0_.username AS username_1, u0_.password AS password_2, u0_.email AS email_3, u0_.roles AS roles_4 FROM users u0_ WHERE u0_.username = ? OR u0_.email = ?',
+                ],
+            ],
+            'stdClass' => [
+                'aliasMap' => [
+                    2 => [
+                        'u' => 'App\\Entity\\User',
+                    ],
+                ],
+                'fieldMappings' => [
+                    2 => [
+                        'id_0' => 'id',
+                        'username_1' => 'username',
+                        'password_2' => 'password',
+                        'email_3' => 'email',
+                        'roles_4' => 'roles',
+                    ],
+                ],
+                'entityMappings' => [
+                    2 => [
+                        'u' => null,
+                    ],
+                ],
+                'columnOwnerMap' => [
+                    2 => [
+                        'id_0' => 'u',
+                        'username_1' => 'u',
+                        'password_2' => 'u',
+                        'email_3' => 'u',
+                        'roles_4' => 'u',
+                    ],
+                ],
+                'declaringClasses' => [
+                    2 => [
+                        'id_0' => 'App\\Entity\\User',
+                        'username_1' => 'App\\Entity\\User',
+                        'password_2' => 'App\\Entity\\User',
+                        'email_3' => 'App\\Entity\\User',
+                        'roles_4' => 'App\\Entity\\User',
+                    ],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+
+});
